@@ -1,0 +1,37 @@
+<li>
+  {{movie.id}} - {{movie.title}}-{{movie.year}}-{{movie.rating}}-{{movie.genre}}
+  <button [routerLink]="['/movies', 'edit', movie.id]">EDIT</button>
+<button (click)=" onDeleteClick()">Delete</button>
+<button (click)="playMovie(movie.thumbnail)">Play</button>
+</li>
+<iframe [src]="thumbnailUrl | safe: 'resourceUrl'" frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-inpicture" allowfullscreen></iframe>
+
+
+
+
+
+
+  <!-- <app-root>
+  <app-movie-list>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+      </tr>
+      <app-movie>
+        <tr>
+          <td>1</td>
+          <td>Star wars</td>
+        </tr>
+      </app-movie>
+      <app-movie>
+        <tr>
+          <td>2</td>
+          <td>Shawshank Redemption</td>
+        </tr>
+      </app-movie>
+    </table>
+  </app-movie-list>
+</app-root> -->
+

@@ -1,0 +1,3 @@
+<h2>logged in:<b>{{loggedIn?"yes":"no"}}</b></h2>
+<button *ngIf="!loggedIn" (click)="login()">LogIn</button>
+<button *ngIf="loggedIn" (click)="logout()">Logout</button>
